@@ -22,7 +22,7 @@ const CartSection = () => {
 
     }
     useEffect(() => {
-        // Scroll to the top of the page when this component is rendered
+
         window.scrollTo(0, 0);
     }, []);
     return (
@@ -31,7 +31,7 @@ const CartSection = () => {
             {
                 carts.map((cart) => <Cart key={cart.id} cart={cart} />)
             }
-            <div className="border-t-2 border-gray-300 pt-4 mt-4 text-right">
+            <div className="border-t-2 border-gray-300 pt-4 mt-4 text-center lg:text-right">
                 <p className="text-lg font-semibold">
                     Subtotal: <span>${totalPrice.toFixed(2)}</span>
                 </p>

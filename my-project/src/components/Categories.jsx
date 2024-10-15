@@ -14,7 +14,7 @@ const Categories = () => {
     }
     return (
         <div >
-            <div className="flex justify-center overflow-x-scroll">
+            <div className="flex justify-center flex-wrap  lg:flex-nowrap ">
                 {
                     categories.map((category) => (
                         <button key={Math.random()} // use category name as the key if unique
@@ -24,8 +24,8 @@ const Categories = () => {
 
 
                             }}
-                            className={`border border-black mx-3 uppercase w-48 text-center
-                                    py-2 rounded-lg font-semibold transition duration-300 ease-in-out
+                            className={`border border-black mx-3 uppercase w-48 text-center text-sm py-2 mb-2 
+                                   lg:py-2 rounded-lg lg:font-semibold transition duration-300 ease-in-out
                                     ${category.isActive === true ? 'bg-black text-white' : 'text-gray-600'}`}
                         >
                             {category.categoryName}
